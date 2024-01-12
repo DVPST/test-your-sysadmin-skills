@@ -78,7 +78,7 @@
 
 ## <a name="introduction">Вступление</a>
 
-### :diamond_shape_with_a_dot_inside: <a name="Простые вопросы">Simple Questions</a>
+### :diamond_shape_with_a_dot_inside: <a name="simple-questions">Простые вопросы</a>
 
 - <b>Чему вы научились на этой неделе?</b>
 - <b>Что вас волнует или заинтересовало в мире сисадминов?</b>
@@ -95,9 +95,9 @@
 - <b>Как вы взаимодействуете с разработчиками: *мы против них* или * все объединяются, используя другой подход*?</b>
 - <b>Какой вопрос сисадмину вы бы задали, если бы брали у меня интервью, чтобы узнать, насколько хорошо я справляюсь с нестандартными ситуациями?</b>
 
-## <a name="Общие знания">General Knowledge</a>
+## <a name="general-knowledge">Общие знания</a>
 
-### :diamond_shape_with_a_dot_inside: <a name="Младший системный администратор">Junior Sysadmin</a>
+### :diamond_shape_with_a_dot_inside: <a name="junior-sysadmin">Младший системный администратор</a>
 
 ###### Системные вопросы (37)
 
