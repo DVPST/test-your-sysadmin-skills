@@ -8,11 +8,11 @@
 
 <p align="center">:star:</p>
 
-<p align="center">"<i>A great Admin doesn't need to know everything, but they should be able to come up with amazing solutions to impossible projects.</i>" - cwheeler33 (ServerFault)</p>
+<p align="center">"<i>Отличному администратору не обязательно знать все, но он должен уметь находить удивительные решения для невыполнимых проектов.</i>" - cwheeler33 (ServerFault)</p>
 
 <p align="center">:star:</p>
 
-<p align="center">"<i>My skills are making things work, not knowing a billion facts. [...] If I need to fix a system I’ll identify the problem, check the logs and look up the errors. If I need to implement a solution I’ll research the right solution, implement and document it, the later on only really have a general idea of how it works unless I interact with it frequently... it’s why it’s documented.</i>" - Sparcrypt (Reddit)</p>
+<p align="center">"<i>Мои навыки позволяют заставить все работать, не зная миллиарда фактов. [...] Если мне нужно починить систему, я выявлю проблему, проверю журналы и найду ошибки. Если мне нужно внедрить решение, я исследую правильное решение, внедряю и документирую его, позже у меня будет только общее представление о том, как оно работает, если я не буду часто с ним взаимодействовать... вот почему это документировано.</i>" - Sparcrypt (Reddit)</p>
 
 <br>
 
