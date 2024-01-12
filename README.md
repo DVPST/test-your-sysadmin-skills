@@ -43,20 +43,20 @@
 
 <br>
 
-:information_source: &nbsp;This project contains **284** test questions and answers that can be used as a test your knowledge or during an interview/exam for position such as **Linux (\*nix) System Administrator**.
+:information_source: &nbsp;Этот проект содержит **284** тестовых вопросов и ответов, которые можно использовать в качестве проверки ваших знаний или во время собеседования/экзамена на такую должность, как **Системный администратор Linux (\*nix)**.
 
-:heavy_check_mark: &nbsp;The answers are only **examples** and do not exhaust the whole topic. Most of them contains **useful resources** for a deeper understanding.
+:heavy_check_mark: &nbsp;Ответы являются лишь ** примерами ** и не исчерпывают всю тему. Большинство из них содержит **полезные ресурсы ** для более глубокого понимания.
 
-:warning: &nbsp;Questions marked **`***`** don't have answer yet or answer is incomplete - **make a pull request to add them**!
+:warning: &nbsp;На вопросы, отмеченные **`***`**, пока нет ответа или ответ неполный — **отправьте запрос на их добавление** (pull request)!
 
-:traffic_light: &nbsp;If you find something which doesn't make sense, or something doesn't seem right, **please make a pull request** and please add valid and well-reasoned explanations about your changes or comments.
+:traffic_light: &nbsp;Если вы обнаружите что-то, что не имеет смысла, или что-то кажется неправильным, ** пожалуйста, сделайте запрос на удаление ** и, пожалуйста, добавьте действительные и хорошо аргументированные объяснения ваших изменений или комментариев.
 
-:books: &nbsp;In order to improve your knowledge/skills please see [devops-interview-questions](https://github.com/bregman-arie/devops-interview-questions). It looks really interesting.
+:books: &nbsp;Чтобы улучшить свои знания / навыки, пожалуйста, ознакомьтесь с [вопросы для собеседования devops](https://github.com/bregman-arie/devops-interview-questions). Это выглядит действительно интересно.
 
 <br>
 
 <p align="center">
-  » <b><code><a href="https://github.com/trimstray/test-your-sysadmin-skills/issues">All suggestions are welcome</a></code></b> «
+  » <b><code><a href="https://github.com/trimstray/test-your-sysadmin-skills/issues">Все предложения приветствуются</a></code></b> «
 </p>
 
 <br>
