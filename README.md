@@ -102,7 +102,7 @@
 ###### Системные вопросы (37)
 
 <details>
-<summary><b>Give some examples of Linux distribution. What is your favorite distro and why?</b></summary><br>
+<summary><b>Приведите несколько примеров дистрибутива Linux. Какой ваш любимый дистрибутив и почему?</b></summary><br>
 - Red Hat Enterprise Linux
 - Fedora
 - CentOS
@@ -116,36 +116,36 @@
 - Kali
 - Backbox
 
-My favorite Linux distribution:
+Мой любимый дистрибутив Linux:
 
-- **Arch Linux**, which offers a nice minimalist base system on which one can build a custom operating system. The beauty of it too is that it has the Arch User Repository (AUR), which when combined with its official binary repositories allows it to probably have the largest repositories of any distribution. Its packaging process is also very simple, which means if one wants a package not in its official repositories or the AUR, it should be easy to make it for oneself.
-- **Linux Mint**, which is also built from Ubuntu LTS releases, but features editions featuring a few different desktop environments, including Cinnamon, MATE and Xfce. Mint is quite polished and its aesthetics are rather appealing, I especially like its new icon theme, although I do quite dislike its GTK+ theme (too bland to my taste). I’ve also found a bug in its latest release Mint 19, that is getting quite irritating as I asked for with it over a fortnight ago on their forums and I have received no replies so far and it is a bug that makes my life on it more difficult.
-- **Kali Linux**, is a Debian-based Linux distribution aimed at advanced Penetration Testing and Security Auditing. Kali contains several hundred tools which are geared towards various information security tasks, such as Penetration Testing, Security research, Computer Forensics and Reverse Engineering.
+- ** Arch Linux **, который предлагает приятную минималистичную базовую систему, на основе которой можно создать пользовательскую операционную систему. Прелесть его также в том, что у него есть пользовательский репозиторий Arch (AUR), который в сочетании с его официальными бинарными репозиториями позволяет ему, вероятно, иметь самые большие репозитории из любого дистрибутива. Процесс его упаковки также очень прост, а это значит, что если кто-то хочет получить пакет, которого нет в официальных хранилищах или AUR, сделать его самостоятельно будет несложно.
+- ** Linux Mint **, который также создан на основе выпусков Ubuntu LTS, но включает версии с несколькими различными средами рабочего стола, включая Cinnamon, MATE и Xfce. Mint довольно отполирован, и его эстетика довольно привлекательна, мне особенно нравится его новая тема значков, хотя мне совершенно не нравится его тема GTK + (слишком безвкусная на мой вкус). Я также обнаружил ошибку в его последней версии Mint 19, которая становится довольно раздражающей, поскольку я спрашивал об этом более двух недель назад на их форумах, и до сих пор я не получил никаких ответов, и это ошибка, которая усложняет мою жизнь в it.
+- **Kali Linux** - дистрибутив Linux на базе Debian, предназначенный для расширенного тестирования на проникновение и аудита безопасности. Kali содержит несколько сотен инструментов, которые предназначены для решения различных задач информационной безопасности, таких как тестирование на проникновение, исследования безопасности, компьютерная криминалистика и обратный инжиниринг.
 
-Useful resources:
+Полезные ресурсы:
 
-- [List of Linux distributions](https://en.wikipedia.org/wiki/List_of_Linux_distributions)
-- [What is your favorite Linux distro and why?](https://www.quora.com/What-is-your-favorite-Linux-distro-and-why)
+- [Список дистрибутивов Linux](https://en.wikipedia.org/wiki/List_of_Linux_distributions)
+- [Какой ваш любимый дистрибутив Linux и почему?](https://www.quora.com/What-is-your-favorite-Linux-distro-and-why)
 
 </details>
 
 <details>
-<summary><b>What are the differences between Unix, Linux, BSD, and GNU?</b></summary><br>
+<summary><b>В чем различия между Unix, Linux, BSD и GNU?</b></summary><br>
 
-**GNU** isn't really an OS. It's more of a set of rules or philosophies that govern free software, that at the same time gave birth to a bunch of tools while trying to create an OS. So **GNU** tools are basically open versions of tools that already existed, but were reimplemented to conform to principals of open software. **GNU/Linux** is a mesh of those tools and the **Linux kernel** to form a complete OS, but there are other GNUs, e.g. **GNU/Hurd**.
+**GNU** на самом деле не является операционной системой. Это скорее набор правил или философий, регулирующих свободное программное обеспечение, которое в то же время породило множество инструментов при попытке создать ОС. Итак, инструменты GNU - это, по сути, открытые версии инструментов, которые уже существовали, но были переосмыслены в соответствии с принципами открытого программного обеспечения. ***GNU/Linux** представляет собой комбинацию этих инструментов и ** Ядра Linux** для формирования полноценной операционной системы, но есть и другие разновидности, например **GNU/Hurd**.
 
-**Unix** and **BSD** are "older" implementations of POSIX that are various levels of "closed source". **Unix** is usually totally closed source, but there are as many flavors of **Unix** as there are **Linux** (if not more). **BSD** is not usually considered "open", but it was considered to be very open when it was released. Its licensing also allowed for commercial use with far fewer restrictions than the more "open" licenses of the time allowed.
+**Unix** и **BSD** являются "старыми" реализациями POSIX, которые представляют собой различные уровни "закрытого исходного кода". ** Unix** обычно имеет полностью закрытый исходный код, но существует столько же разновидностей ** Unix **, сколько и ** Linux** (если не больше). ** BSD** обычно не считается "открытой", но она считалась очень открытой, когда была выпущена. Ее лицензирование также допускало коммерческое использование с гораздо меньшим количеством ограничений, чем более "открытые" лицензии того времени.
 
-**Linux** is the newest of the four. Strictly speaking, it's "just a kernel"; however, in general, it's thought of as a full OS when combined with GNU Tools and several other core components.
+** Linux** является новейшей из четырех. Строго говоря, это "просто ядро"; однако, в целом, оно рассматривается как полноценная ОС в сочетании с инструментами GNU и несколькими другими основными компонентами.
 
-The main governing differences between these are their ideals. **Unix**, **Linux**, and **BSD** have different ideals that they implement. They are all POSIX, and are all basically interchangeable. They do solve some of the same problems in different ways. So other then ideals and how they choose to implement POSIX standards, there is little difference.
+Основными определяющими различиями между ними являются их идеалы. **Unix**, **Linux** и **BSD** имеют разные идеалы, которые они реализуют. Все они являются POSIX и все в основном взаимозаменяемы. Они решают некоторые из одних и тех же проблем по-разному. Таким образом, кроме идеалов и того, как они решают внедрять стандарты POSIX, разница невелика.
 
-For more info I suggest your read a brief article on the creation of **GNU**, **OSS**, **Linux**, **BSD**, and **UNIX**. They will be slanted towards their individual ideas, but those articles should give you a better idea of the differences.
+Для получения дополнительной информации я предлагаю вам прочитать краткую статью о создании **GNU**, **OSS**, **Linux**, **BSD** и **UNIX**. Они будут ориентированы на их индивидуальные идеи, но эти статьи должны дать вам лучшее представление о различиях.
 
-Useful resources:
+Полезные ресурсы:
 
-- [What is the difference between Unix, Linux, BSD and GNU? (original)](https://unix.stackexchange.com/questions/104714/what-is-the-difference-between-unix-linux-bsd-and-gnu)
-- [The Great Debate: Is it Linux or GNU/Linux?](https://www.howtogeek.com/139287/the-great-debate-is-it-linux-or-gnulinux/)
+- [В чем разница между Unix, Linux, BSD и GNU? (оригинал)](https://unix.stackexchange.com/questions/104714/what-is-the-difference-between-unix-linux-bsd-and-gnu)
+- [Великий спор: это Linux или GNU/Линукс?](https://www.howtogeek.com/139287/the-great-debate-is-it-linux-or-gnulinux/)
 
 </details>
 
