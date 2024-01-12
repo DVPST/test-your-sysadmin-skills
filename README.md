@@ -76,30 +76,30 @@
 
 <br>
 
-## <a name="introduction">Introduction</a>
+## <a name="Вступление">Introduction</a>
 
-### :diamond_shape_with_a_dot_inside: <a name="simple-questions">Simple Questions</a>
+### :diamond_shape_with_a_dot_inside: <a name="Простые вопросы">Simple Questions</a>
 
-- <b>What did you learn this week?</b>
-- <b>What excites or interests you about the sysadmin world?</b>
-- <b>What is a recent technical challenge you experienced and how did you solve it?</b>
-- <b>Tell me about the last major project you finished.</b>
-- <b>Do you contribute to any open source projects?</b>
-- <b>Describe the setup of your homelab.</b>
-- <b>What personal achievement are you most proud of?</b>
-- <b>Tell me about the biggest mistake you've made. How would you do it differently today?</b>
-- <b>What software tools are you going to install on the first day at a new job?</b>
-- <b>Tell me about how you manage your knowledge database (e.g. wikis, files, portals).</b>
-- <b>What news sources do you check daily? (sysadmin, security-related or other)</b>
-- <b>Your NOC team has a new budget for sysadmin certifications. What certificate would you like and why?</b>
-- <b>How do you interact with developers: *us vs. them* or *all pulling together with a different approach*?</b>
-- <b>Which sysadmin question would you ask, if you were interviewing me, to know, how good I'm with non-standard situations?</b>
+- <b>Чему вы научились на этой неделе?</b>
+- <b>Что вас волнует или заинтересовало в мире сисадминов?</b>
+- <b>С какой технической проблемой вы недавно столкнулись и как вы ее решили?</b>
+- <b>Расскажите мне о последнем крупном проекте, который вы закончили.</b>
+- <b>Участвуете ли вы в каких-либо проектах с открытым исходным кодом?</b>
+- <b>Опишите устройство вашей домашней лаборатории.</b>
+- <b>Каким личным достижением вы больше всего гордитесь?</b>
+- <b>Расскажите мне о самой большой ошибке, которую вы совершили. Как бы вы поступили по-другому сегодня?</b>
+- <b>Какие программные средства вы собираетесь установить в первый день на новой работе?</b>
+- <b>Расскажите мне о том, как вы управляете своей базой данных знаний (например, вики, файлами, порталами).</b>
+- <b>Какие источники новостей вы проверяете ежедневно? (системный администратор, связанные с безопасностью или другие)</b>
+- <b>У вашей команды NOC появился новый бюджет на сертификацию системных администраторов. Какой сертификат вы хотели бы получить и почему?</b>
+- <b>Как вы взаимодействуете с разработчиками: *мы против них* или * все объединяются, используя другой подход*?</b>
+- <b>Какой вопрос сисадмину вы бы задали, если бы брали у меня интервью, чтобы узнать, насколько хорошо я справляюсь с нестандартными ситуациями?</b>
 
-## <a name="general-knowledge">General Knowledge</a>
+## <a name="Общие знания">General Knowledge</a>
 
-### :diamond_shape_with_a_dot_inside: <a name="junior-sysadmin">Junior Sysadmin</a>
+### :diamond_shape_with_a_dot_inside: <a name="Младший системный администратор">Junior Sysadmin</a>
 
-###### System Questions (37)
+###### Системные вопросы (37)
 
 <details>
 <summary><b>Give some examples of Linux distribution. What is your favorite distro and why?</b></summary><br>
