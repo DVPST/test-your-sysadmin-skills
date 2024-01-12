@@ -51,7 +51,7 @@
 
 :traffic_light: &nbsp;Если вы обнаружите что-то, что не имеет смысла, или что-то кажется неправильным, ** пожалуйста, сделайте запрос на удаление ** и, пожалуйста, добавьте действительные и хорошо аргументированные объяснения ваших изменений или комментариев.
 
-:books: &nbsp;Чтобы улучшить свои знания / навыки, пожалуйста, ознакомьтесь с [вопросы для собеседования devops](https://github.com/bregman-arie/devops-interview-questions). Это выглядит действительно интересно.
+:books: &nbsp;Чтобы улучшить свои знания / навыки, пожалуйста, ознакомьтесь с [вопросами для собеседования devops](https://github.com/bregman-arie/devops-interview-questions). Это действительно интересно.
 
 <br>
 
@@ -61,18 +61,18 @@
 
 <br>
 
-## Table of Contents
+## Содержание
 
-| <b><u>The type of chapter</u></b> | <b><u>Number of questions</u></b> | <b><u>Short description</u></b> |
+| <b><u>Тип главы</u></b> | <b><u>Количество вопросов</u></b> | <b><u>Краткое описание</u></b> |
 | :---         | :---         | :---         |
-| <b>[Introduction](#introduction)</b> |||
-| :small_orange_diamond: [Simple Questions](#simple-questions) | 14 questions | Relaxed, fun and simple - are great for starting everything. |
-| <b>[General Knowledge](#general-knowledge)</b> |||
-| :small_orange_diamond: [Junior Sysadmin](#junior-sysadmin) | 65 questions | Reasonably simple and straight based on basic knowledge. |
-| :small_orange_diamond: [Regular Sysadmin](#regular-sysadmin) | 94 questions | The mid level of questions if that you have sound knowledge. |
-| :small_orange_diamond: [Senior Sysadmin](#senior-sysadmin) | 99 questions | Hard questions and riddles. Check it if you want to be good. |
-| <b>[Secret Knowledge](#secret-knowledge)</b> ||
-| :small_orange_diamond: [Guru Sysadmin](#guru-sysadmin) | 12 questions | Really deep questions are to get to know Guru Sysadmin. |
+| <b>[Вступление](#introduction)</b> |||
+| :small_orange_diamond: [Простые вопросы](#simple-questions) | 14 вопросов | Непринужденно, весело и просто - отлично подходит для того, чтобы все начать. |
+| <b>[Общие знания](#general-knowledge)</b> |||
+| :small_orange_diamond: [Младший системный администратор](#junior-sysadmin) | 65 вопросов | Достаточно простой и понятный, основанный на базовых знаниях. |
+| :small_orange_diamond: [Системный администратор](#regular-sysadmin) | 94 вопроса | Средний уровень вопросов, если вы обладаете глубокими знаниями. |
+| :small_orange_diamond: [Старший системный администратор](#senior-sysadmin) | 99 вопросов | Сложные вопросы и загадки. Проверьте насколько вы хороши. |
+| <b>[Тайные знания](#secret-knowledge)</b> ||
+| :small_orange_diamond: [Системный администратор - Эксперт](#guru-sysadmin) | 12 вопросов | По-настоящему глубокие вопросы - известные только эксперту-сисадмину. |
 
 <br>
 
