@@ -150,39 +150,39 @@
 </details>
 
 <details>
-<summary><b>What is a CLI? Tell me about your favorite CLI tools, tips, and hacks.</b></summary><br>
+<summary><b>Что такое CLI? Расскажите мне о ваших любимых инструментах CLI, советах и хитростях.</b></summary><br>
 
-**CLI** is an acronym for Command Line Interface or Command Language Interpreter. The command line is one of the most powerful ways to control your system/computer.
+**CLI** - это аббревиатура от интерфейса командной строки (Command Line Interface) или интерпретатора командного языка (Command Language Interpreter). Командная строка - один из самых мощных способов управления вашей системой /компьютером.
 
-In Unix like systems, **CLI** is the interface by which a user can type commands for the system to execute. The **CLI** is very powerful, but is not very error-tolerant.
+В Unix-подобных системах **CLI** - это интерфейс, с помощью которого пользователь может вводить команды для выполнения системой. **CLI** очень мощный, но не очень устойчивый к ошибкам.
 
-The **CLI** allows you to do manipulations with your system’s internals and with code in a much more fine-tuned way. It offers greater flexibility and control than a GUI regardless of what OS is used. Many programs that you might want to use in your software that are hosted on say Github also require running some commands on the **CLI** in order to get them running.
+Интерфейс **CLI ** позволяет вам выполнять манипуляции с внутренними компонентами вашей системы и с кодом гораздо более тонко настроенным способом. Он обеспечивает большую гибкость и контроль, чем графический интерфейс, независимо от того, какая ОС используется. Многие программы, которые вы, возможно, захотите использовать в своем программном обеспечении, размещенном, скажем, на Github, также требуют выполнения некоторых команд в **CLI**, чтобы запустить их.
 
-**My favorite tools**
+**Мои любимые инструменты**
 
-- `screen` - free terminal multiplexer, I can start a session and My terminals will be saved even when you connection is lost, so you can resume later or from home
-- `ssh` - the most valuable over-all command to learn, I can use it to do some amazing things:
-  * mount a file system over the internet with `sshfs`
-  * forward commands: runs against a `rsync` server with no `rsync` deamon by starting one itself via ssh
-  * run in batch files: I can redirect the output from the remote command and use it within local batch file
-- `vi/vim` - is the most popular and powerful text editor, it's universal, it's work very fast, even on large files
-- `bash-completion` - contains a number of predefined completion rules for shell
+- `screen` (экран) - бесплатный мультиплексор терминалов, я могу начать сеанс, и мои терминалы будут сохранены даже при потере соединения, так что вы сможете возобновить его позже или из дома
+- `- `ssh` - самая ценная команда для изучения, с ее помощью я могу делать удивительные вещи:
+  * монтировать файловую систему через Интернет с помощью `sshfs`
+  * * пересылка команд: выполняется на сервере `rsync` без демона `rsync`, запуская его самостоятельно через ssh
+  * запуск в пакетных файлах: я могу перенаправить вывод удаленной команды и использовать его в локальном пакетном файле
+- `vi/vim` - самый популярный и мощный текстовый редактор, он универсален, работает очень быстро, даже с большими файлами
+- `bash-completion` - содержит ряд предопределенных правил завершения для shell
 
-**Tips & Hacks**
+** Советы и хитрости**
 
-- searches the command history with `CTRL + R`
-- `popd/pushd` and other shell builtins which allow you manipulate the directory stack
-- editing keyboard shortcuts like a `CTRL + U`, `CTRL + E`
-- combinations will be auto-expanded:
-  * `!*` - all arguments of last command
-  * `!!` - the whole of last command
-  * `!ssh` - last command starting with ssh
+- выполняет поиск в истории команд с помощью `CTRL + R`
+- `popd/pushd` и другие встроенные функции оболочки, которые позволяют вам манипулировать стеком каталогов
+- редактирование сочетаний клавиш, таких как "CTRL + U", `CTRL + E`
+- комбинации будут автоматически расширены:
+  * `!*` - все аргументы последней команды
+  * `!!` - вся последняя команда
+  * `!ssh` - последняя команда, начинающаяся с ssh
 
-Useful resources:
+Полезные ресурсы:
 
-- [Command Line Interface Definition](http://www.linfo.org/command_line_interface.html)
-- [What is your single most favorite command-line trick using Bash?](https://stackoverflow.com/questions/68372/what-is-your-single-most-favorite-command-line-trick-using-bash/69716)
-- [What are your favorite command line features or tricks?](https://unix.stackexchange.com/questions/6/what-are-your-favorite-command-line-features-or-tricks)
+- [Определение интерфейса командной строки](http://www.linfo.org/command_line_interface.html)
+- [Какой ваш самый любимый трюк с командной строкой с использованием Bash?](https://stackoverflow.com/questions/68372/what-is-your-single-most-favorite-command-line-trick-using-bash/69716)
+- [Какие ваши любимые функции или хитрости командной строки?](https://unix.stackexchange.com/questions/6/what-are-your-favorite-command-line-features-or-tricks)
 
 </details>
 
