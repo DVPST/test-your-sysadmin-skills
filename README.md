@@ -488,54 +488,54 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin
 </details>
 
 <details>
-<summary><b>You typing <code>CTRL + C</code> but your script still running. How do you stop it? ***</b></summary><br>
+<summary><b>Вы набираете <код>CTRL + C</код>, но ваш скрипт все еще запущен. Как вы его останавливаете? ***</b></summary><br>
 
-To be completed.
+Подлежит завершению.
 
-Useful resources:
+Полезные ресурсы:
 
-- [How to kill a script running in terminal, without closing terminal (Ctrl + C doesn't work)? (original)](https://askubuntu.com/questions/520107/how-to-kill-a-script-running-in-terminal-without-closing-terminal-ctrl-c-doe)
-- [What's the difference between ^C and ^D for Unix/Mac OS X terminal?](https://superuser.com/questions/169051/whats-the-difference-between-c-and-d-for-unix-mac-os-x-terminal)
+- [Как отключить скрипт, запущенный в терминале, не закрывая терминал (Ctrl + C не работает)? (оригинал)](https://askubuntu.com/questions/520107/how-to-kill-a-script-running-in-terminal-without-closing-terminal-ctrl-c-doe)
+- [В чем разница между ^C и ^D для терминала Unix/Mac OS X?](https://superuser.com/questions/169051/whats-the-difference-between-c-and-d-for-unix-mac-os-x-terminal)
 
 </details>
 
 <details>
-<summary><b>What is <code>grep</code> command? How to match multiple strings in the same line?</b></summary><br>
+<summary><b>Что такое команда <код>grep</код>? Как сопоставить несколько строк в одной строке?</b></summary><br>
 
-The `grep` utilities are a family of Unix tools, including `egrep` and `fgrep`.
+Утилиты `grep` представляют собой семейство инструментов Unix, включая `egrep` и `fgrep`.
 
-`grep` searches file patterns. If you are looking for a specific pattern in the output of another command, `grep` highlights the relevant lines. Use this grep command for searching log files, specific processes, and more.
+`grep` выполняет поиск шаблонов файлов. Если вы ищете определенный шаблон в выходных данных другой команды, `grep` выделяет соответствующие строки. Используйте эту команду grep для поиска файлов журналов, определенных процессов и многого другого.
 
-For match multiple strings:
+Для сопоставления нескольких строк:
 
 ```bash
 grep -E "string1|string2" filename
 ```
 
-or
+или
 
 ```bash
 grep -e "string1" -e "string2" filename
 ```
 
-Useful resources:
+Полезные ресурсы:
 
-- [What is grep, and how do I use it? (original)](https://kb.iu.edu/d/afiy)
+- [Что такое grep и как мне его использовать? (оригинал)](https://kb.iu.edu/d/afiy)
 
 </details>
 
 <details>
-<summary><b>Explain the file content commands along with the description.</b></summary><br>
+<summary><b>Объясните команды содержимого файла вместе с описанием.</b></summary><br>
 
-- `head`: to check the starting of a file.
-- `tail`: to check the ending of the file. It is the reverse of head command.
-- `cat`: used to view, create, concatenate the files.
-- `more`: used to display the text in the terminal window in pager form.
-- `less`: used to view the text in the backward direction and also provides single line movement.
+- `head`: для проверки начала файла.
+- `tail`: для проверки окончания файла. Это обратная команда head.
+- `cat`: используется для просмотра, создания, объединения файлов.
+- `more`: используется для отображения текста в окне терминала в постраничном виде.
+- `less`: используется для просмотра текста в обратном направлении, а также обеспечивает перемещение по одной строке.
 
-Useful resources:
+Полезные ресурсы:
 
-- [Viewing text files from the shell prompt](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-viewingtext-terminal.html)
+- [Просмотр текстовых файлов из командной строки](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-viewingtext-terminal.html)
 
 </details>
 
