@@ -224,7 +224,7 @@
 </details>
 
 <details>
-<summary><b>Что означают поля в выводе <code>ls -al</code>?</b></summary><br>
+<summary><b>Что означают поля в выводе <код>ls -al</код>?</b></summary><br>
 
 В порядке вывода:
 
@@ -413,77 +413,77 @@ Linux ** средние значения загрузки ** (load averages) - �
 </details>
 
 <details>
-<summary><b>Where is my password stored on Linux/Unix?</b></summary><br>
+<summary><b>Где хранится мой пароль в Linux/Unix?</b></summary><br>
 
-The passwords are not stored anywhere on the system at all. What is stored in `/etc/shadow` are so called hashes of the passwords.
+Пароли вообще нигде в системе не хранятся. То, что хранится в `/etc/shadow`, - это так называемые хэши паролей.
 
-A hash of some text is created by performing a so called one way function on the text (password), thus creating a string to check against. By design it is "impossible" (computationally infeasible) to reverse that process.
+Хэш некоторого текста создается путем выполнения так называемой односторонней функции над текстом (паролем), создавая, таким образом, строку для проверки. По замыслу "невозможно" (вычислительно неосуществимо) обратить вспять этот процесс.
 
-Older Unix variants stored the encrypted passwords in `/etc/passwd` along with other information about each account.
+Более старые версии Unix хранили зашифрованные пароли в `/etc/passwd` вместе с другой информацией о каждой учетной записи.
 
-Newer ones simply have a `*` in the relevant field in `/etc/passwd` and use `/etc/shadow` to store the password, in part to ensure nobody gets read access to the passwords when they only need the other stuff (`shadow` is usually protected more strongly than `passwd`).
+Более новые просто имеют "*" в соответствующем поле в `/etc/passwd` и используют `/etc/shadow` для хранения пароля, отчасти для того, чтобы гарантировать, что никто не получит доступ на чтение к паролям, когда им нужны только другие данные (`shadow` обычно защищен более надежно, чем `passwd`).
 
-For more info consult `man crypt`, `man shadow`, `man passwd`.
+Для получения дополнительной информации обратитесь к `man crypt`, `man shadow`, `man passwd`.
 
-Useful resources:
+Полезные ресурсы:
 
-- [Where is my password stored on Linux?](https://security.stackexchange.com/questions/37050/where-is-my-password-stored-on-linux)
-- [Where are the passwords of the users located in Linux?](https://www.cyberciti.biz/faq/where-are-the-passwords-of-the-users-located-in-linux/)
-- [Linux Password & Shadow File Formats](https://www.tldp.org/LDP/lame/LAME/linux-admin-made-easy/shadow-file-formats.html)
+- [Где хранится мой пароль в Linux?](https://security.stackexchange.com/questions/37050/where-is-my-password-stored-on-linux)
+- [Где находятся пароли пользователей в Linux?](https://www.cyberciti.biz/faq/where-are-the-passwords-of-the-users-located-in-linux/)
+- [Форматы паролей и теневых файлов Linux](https://www.tldp.org/LDP/lame/LAME/linux-admin-made-easy/shadow-file-formats.html)
 
 </details>
 
 <details>
-<summary><b>How to recursively change permissions for all directories except files and for all files except directories?</b></summary><br>
+<summary><b>Как рекурсивно изменить разрешения для всех каталогов, кроме файлов, и для всех файлов, кроме каталогов?</b></summary><br>
 
-To change all the directories e.g. to **755** (`drwxr-xr-x`):
+Чтобы изменить все каталоги, например, на **755** (`drwxr-xr-x`):
 
 ```bash
 find /opt/data -type d -exec chmod 755 {} \;
 ```
 
-To change all the files e.g. to **644** (`-rw-r--r--`):
+Чтобы изменить все файлы, например, на **644** (`-rw-r--r--`):
 
 ```bash
 find /opt/data -type f -exec chmod 644 {} \;
 ```
 
-Useful resources:
+Полезные ресурсы:
 
-- [How do I set chmod for a folder and all of its subfolders and files? (original)](https://stackoverflow.com/questions/3740152/how-do-i-set-chmod-for-a-folder-and-all-of-its-subfolders-and-files?rq=1)
+- [Как мне указать chmod для папки и всех ее вложенных папок и файлов? (оригинал)](https://stackoverflow.com/questions/3740152/how-do-i-set-chmod-for-a-folder-and-all-of-its-subfolders-and-files?rq=1)
 
 </details>
 
 <details>
-<summary><b>Every command fails with <code>command not found</code>. How to trace the source of the error and resolve it?</b></summary><br>
+<summary><b>Каждая команда завершается ошибкой с <код>команда не найдена</код>. Как отследить источник ошибки и устранить ее?</b></summary><br>
 
-It looks that at one point or another are overwriting the default `PATH` environment variable. The type of errors you have, indicates that `PATH` does not contain e.g. `/bin`, where the commands (including bash) reside.
+Похоже, что в тот или иной момент происходит перезапись переменной окружения `PATH` по умолчанию. Тип ошибок, которые у вас есть, указывает на то, что `PATH` не содержит, например, `/bin`, где находятся команды (включая bash).
 
-One way to begin debugging your bash script or command would be to start a subshell with the `-x` option:
+Одним из способов начать отладку вашего скрипта или команды bash было бы запустить подоболочку с параметром `-x`:
 
 ```bash
 bash --login -x
 ```
 
-This will show you every command, and its arguments, which is executed when starting that shell.
+Это покажет вам каждую команду и ее аргументы, которые выполняются при запуске этой оболочки.
 
-Also very helpful is show `PATH` variable values:
+Также очень полезно показывать значения переменных `PATH`:
 
 ```bash
 echo $PATH
 ```
 
-If you run this:
+Если вы запустите это:
 
 ```bash
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 ```
 
-most commands should start working - and then you can edit `~/.bash_profile` instead of `~/.bashrc` and fix whatever is resetting `PATH` there. Default `PATH` variable values for **root** and other users is in `/etc/profile` file.
+большинство команд должны начать работать - и тогда вы можете отредактировать `~/.bash_profile` вместо `~/.bashrc` и исправить все, что там сбрасывает `PATH`. Значения переменных `PATH` по умолчанию для **root** и других пользователей находятся в файле `/etc/profile`.
 
-Useful resource:
+Полезный ресурс:
 
-- [How to correctly add a path to PATH?](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path)
+- [Как правильно добавить путь к PATH?](https://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path)
 
 </details>
 
