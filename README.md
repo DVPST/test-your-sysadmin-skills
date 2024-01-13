@@ -540,42 +540,42 @@ grep -e "string1" -e "string2" filename
 </details>
 
 <details>
-<summary><b>SIGHUP, SIGINT, SIGKILL, and SIGTERM POSIX signals. Explain.</b></summary><br>
+<summary><b>Объясни сигналы SIGHUP, SIGINT, SIGKILL и SIGTERM POSIX. </b></summary><br>
 
-- **SIGHUP** - is sent to a process when its controlling terminal is closed. It was originally designed to notify the process of a serial line drop (a hangup). Many daemons will reload their configuration files and reopen their logfiles instead of exiting when receiving this signal.
-- **SIGINT** - is sent to a process by its controlling terminal when a user wishes to interrupt the process. This is typically initiated by pressing `Ctrl+C`, but on some systems, the "delete" character or "break" key can be used.
-- **SIGKILL** - is sent to a process to cause it to terminate immediately (kill). In contrast to **SIGTERM** and **SIGINT**, this signal cannot be caught or ignored, and the receiving process cannot perform any clean-up upon receiving this signal.
-- **SIGTERM** - is sent to a process to request its termination. Unlike the **SIGKILL** signal, it can be caught and interpreted or ignored by the process. This allows the process to perform nice termination releasing resources and saving state if appropriate. **SIGINT** is nearly identical to **SIGTERM**.
+- **SIGHUP** - отправляется процессу, когда его управляющий терминал закрыт. Первоначально он был разработан для уведомления процесса об обрыве последовательной линии (зависании). Многие демоны перезагружают свои конфигурационные файлы и повторно открывают свои лог-файлы вместо выхода при получении этого сигнала.
+- **SIGINT** - отправляется процессу его управляющим терминалом, когда пользователь желает прервать процесс. Обычно это инициируется нажатием `Ctrl+C`, но в некоторых системах может использоваться символ "delete" или клавиша "break".
+- **SIGKILL** - отправляется процессу, чтобы вызвать его немедленное завершение (kill). В отличие от **SIGTERM** и **SIGINT**, этот сигнал не может быть перехвачен или проигнорирован, и принимающий процесс не может выполнить какую-либо очистку при получении этого сигнала.
+- **SIGTERM** - отправляется процессу с запросом на его завершение. В отличие от сигнала **SIGKILL**, он может быть перехвачен и интерпретирован или проигнорирован процессом. Это позволяет процессу выполнить корректное завершение, высвобождая ресурсы и сохраняя состояние, если это необходимо. **SIGINT** почти идентичен **SIGTERM**.
 
-Useful resources:
+Полезные ресурсы:
 
-- [POSIX signals](https://dsa.cs.tsinghua.edu.cn/oj/static/unix_signal.html)
-- [Introduction To Unix Signals Programming](http://titania.ctie.monash.edu.au/signals/)
-
-</details>
-
-<details>
-<summary><b>What does <code>kill</code> command do?</b></summary><br>
-
-In Unix and Unix-like operating systems, `kill` is a command used to send a signal to a process. By default, the message sent is the termination signal, which requests that the process exit. But `kill` is something of a misnomer; the signal sent may have nothing to do with process killing.
-
-Useful resources:
-
-- [Mastering the "Kill" Command in Linux](https://www.maketecheasier.com/kill-command-in-linux/)
+- [Сигналы POSIX](https://dsa.cs.tsinghua.edu.cn/oj/static/unix_signal.html)
+- [Введение в программирование сигналов Unix](http://titania.ctie.monash.edu.au/signals/)
 
 </details>
 
 <details>
-<summary><b>What is the difference between <code>rm</code> and <code>rm -rf</code>?</b></summary><br>
+<summary><b>Что делает команда <код>kill</код>?</b></summary><br>
 
-`rm` only deletes the named files (and not directories). With `-rf` as you say:
+В Unix и Unix-подобных операционных системах `kill` - это команда, используемая для отправки сигнала процессу. По умолчанию отправляемое сообщение является сигналом завершения, который запрашивает завершение процесса. Но `kill` - это в некотором роде неправильное название; отправленный сигнал может не иметь ничего общего с уничтожением процесса.
 
-- `-r`, `-R`, `--recursive` recursively deletes content of a directory, including hidden files and sub directories
-- `-f`, `--force` ignore nonexistent files, never prompt
+Полезные ресурсы:
 
-Useful resources:
+- [Освоение команды "Kill" в Linux](https://www.maketecheasier.com/kill-command-in-linux/)
 
-- [What is the difference between `rm -r` and `rm -f`?](https://superuser.com/questions/1126206/what-is-the-difference-between-rm-r-and-rm-f)
+</details>
+
+<details>
+<summary><b>В чем разница между <код>rm</код> и <код>rm -rf</код>?</b></summary><br>
+
+`rm` удаляет только именованные файлы (а не каталоги). С помощью `-rf`, как вы говорите:
+
+- `-r`, `-R`, `--recursive` рекурсивно удаляет содержимое каталога, включая скрытые файлы и подкаталоги
+- `-f`, `--force` игнорируют несуществующие файлы, без подтверждения
+
+Полезные ресурсы:
+
+- [В чем разница между `rm -r` и `rm -f`?](https://superuser.com/questions/1126206/what-is-the-difference-between-rm-r-and-rm-f)
 
 </details>
 
