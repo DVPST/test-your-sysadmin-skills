@@ -253,7 +253,7 @@
 - обычный файл (отображается как `-`)
 - доступный для чтения, записи и исполнения владельцем (`rwx`)
 - читаемый, доступный для записи, но не исполняемый группой (`rw-`)
-- читаемый, но недоступный для записи или исполняемый другими (`r--`)
+- читаемый, но недоступный для записи и исполнения другими (`r--`)
 
 Полезные ресурсы:
 
@@ -292,123 +292,123 @@ last
 </details>
 
 <details>
-<summary><b>What is the advantage of executing the running processes in the background? How can you do that?</b></summary><br>
+<summary><b>В чем преимущество выполнения запущенных процессов в фоновом режиме? Как вы можете это сделать?</b></summary><br>
 
-The most significant advantage of executing the running process in the background is that you can do any other task simultaneously while other processes are running in the background. So, more processes can be completed in the background while you are working on different processes. It can be achieved by adding a special character `&` at the end of the command.
+Наиболее значительным преимуществом выполнения запущенного процесса в фоновом режиме является то, что вы можете выполнять любую другую задачу одновременно, пока другие процессы выполняются в фоновом режиме. Таким образом, в фоновом режиме может быть завершено больше процессов, пока вы работаете над разными процессами. Этого можно достичь, добавив специальный символ `&` в конце команды.
 
-Generally applications that take too long to execute and doesn't require user interaction are sent to background so that we can continue our work in terminal.
+Как правило, приложения, выполнение которых занимает слишком много времени и не требует взаимодействия с пользователем, отправляются в фоновый режим, чтобы мы могли продолжить нашу работу в терминале.
 
-For example if you want to download something in background, you can:
+Например, если вы хотите загрузить что-то в фоновом режиме, вы можете:
 
 ```bash
 wget https://url-to-download.com/download.tar.gz &
 ```
 
-When you run the above command you get the following output:
+Когда вы запускаете приведенную выше команду, вы получаете следующий результат:
 
 ```bash
 [1] 2203
 ```
 
-Here 1 is the serial number of job and 2203 is PID of the job.
+Здесь 1 - серийный номер задания, а 2203 - PID задания.
 
-You can see the jobs running in background using the following command:
+Вы можете просмотреть задания, выполняющиеся в фоновом режиме, используя следующую команду:
 
 ```bash
 jobs
 ```
 
-When you execute job in background it give you a PID of job, you can kill the job running in background using the following command:
+Когда вы выполняете задание в фоновом режиме, оно выдает вам PID задания, вы можете отключить задание, запущенное в фоновом режиме, используя следующую команду:
 
 ```bash
 kill PID
 ```
 
-Replace the PID with the PID of the job. If you have only one job running you can bring it to foreground using:
+Замените PID на PID задания. Если у вас запущено только одно задание, вы можете вывести его на передний план, используя:
 
 ```bash
 fg
 ```
 
-If you have multiple jobs running in background you can bring any job in foreground using:
+Если у вас есть несколько заданий, запущенных в фоновом режиме, вы можете вывести любое задание на передний план, используя:
 
 ```bash
 fg %#
 ```
 
-Replace the `#` with serial number of the job.
+Замените `#` на серийный номер задания.
 
-Useful resources:
+Полезные ресурсы:
 
-- [How do I run a Unix process in the background?](https://kb.iu.edu/d/afnz)
-- [Job Control Commands](http://tldp.org/LDP/abs/html/x9644.html)
-- [What is/are the advantage(s) of running applications in background?](https://unix.stackexchange.com/questions/162186/what-is-are-the-advantages-of-running-applications-in-backgound)
-
-</details>
-
-<details>
-<summary><b>Before you can manage processes, you must be able to identify them. Which tools will you use? ***</b></summary><br>
-
-To be completed.
+- [Как мне запустить Unix-процесс в фоновом режиме?](https://kb.iu.edu/d/afnz)
+- [Команды управления заданием](http://tldp.org/LDP/abs/html/x9644.html)
+- [В чем заключается преимущество запуска приложений в фоновом режиме?](https://unix.stackexchange.com/questions/162186/what-is-are-the-advantages-of-running-applications-in-backgound)
 
 </details>
 
 <details>
-<summary><b>Running the command as root user. It is a good or bad practices?</b></summary><br>
+<summary><b>Прежде чем вы сможете управлять процессами, вы должны уметь их идентифицировать. Какие инструменты вы будете использовать? ***</b></summary><br>
 
-Running (everything) as root is bad because:
-
-- **Stupidity**: nothing prevents you from making a careless mistake. If you try to change the system in any potentially harmful way, you need to use sudo, which ensures a pause (while you're entering the password) to ensure that you aren't about to make a mistake.
-
-- **Security**: harder to hack if you don't know the admin user's login account. root means you already have one half of the working set of admin credentials.
-
-- **You don't really need it**: if you need to run several commands as root, and you're annoyed by having to enter your password several times when `sudo` has expired, all you need to do is `sudo -i` and you are now root. Want to run some commands using pipes? Then use `sudo sh -c "command1 | command2"`.
-
-- **You can always use it in the recovery console**: the recovery console allows you to recover from a major mistake, or fix a problem caused by an app (which you still had to run as `sudo`). Ubuntu doesn't have a password for the root account in this case, but you can search online for changing that - this will make it harder for anyone that has physical access to your box to be able to do harm.
-
-Useful resources:
-
-- [Why is it bad to log in as root? (original)](https://askubuntu.com/questions/16178/why-is-it-bad-to-log-in-as-root)
-- [What's wrong with always being root?](https://serverfault.com/questions/57962/whats-wrong-with-always-being-root)
-- [Why you should avoid running applications as root](https://bencane.com/2012/02/20/why-you-should-avoid-running-applications-as-root/)
+Подлежит завершению.
 
 </details>
 
 <details>
-<summary><b>How to check memory stats and CPU stats?</b></summary><br>
+<summary><b>Запуск команды от имени пользователя root. Это хорошая или плохая практика?</b></summary><br>
 
-You'd use `top/htop` for both. Using `free` and `vmstat` command we can display the physical and virtual memory statistics respectively. With the help of `sar` command we see the CPU utilization & other stats (but `sar` isn't even installed in most systems).
+Запуск (всего) от имени root - это плохо, потому что:
 
-Useful resources:
+- **Глупость**: ничто не мешает вам совершить неосторожную ошибку. Если вы попытаетесь изменить систему любым потенциально опасным способом, вам нужно использовать sudo, который обеспечивает паузу (пока вы вводите пароль), чтобы убедиться, что вы не собираетесь совершить ошибку.
 
-- [How do I Find Out Linux CPU Utilization?](https://www.cyberciti.biz/tips/how-do-i-find-out-linux-cpu-utilization.html)
-- [16 Linux server monitoring commands you really need to know](https://www.hpe.com/us/en/insights/articles/16-linux-server-monitoring-commands-you-really-need-to-know-1703.html)
+- ** Безопасность **: взломать сложнее, если вы не знаете учетную запись администратора. root означает, что у вас уже есть половина рабочего набора учетных данных администратора.
+
+- ** На самом деле вам это не нужно **: если вам нужно выполнить несколько команд от имени root, и вас раздражает необходимость вводить свой пароль несколько раз, когда срок действия `sudo` истек, все, что вам нужно сделать, это `sudo -i`, и теперь вы root. Хотите запустить несколько команд, используя каналы? Тогда используйте `sudo sh -c "command1 | command2"`.
+
+- ** Вы всегда можете использовать его в консоли восстановления **: консоль восстановления позволяет вам восстановиться после серьезной ошибки или устранить проблему, вызванную приложением (которое вам все равно пришлось запускать как `sudo`). В этом случае в Ubuntu нет пароля для учетной записи root, но вы можете поискать в Интернете, чтобы изменить его - это затруднит нанесение вреда любому, у кого есть физический доступ к вашему серверу.
+
+Полезные ресурсы:
+
+- [Почему плохо входить в систему от имени root? (оригинал)](https://askubuntu.com/questions/16178/why-is-it-bad-to-log-in-as-root)
+- [Что плохого в том, чтобы всегда быть root?](https://serverfault.com/questions/57962/whats-wrong-with-always-being-root)
+- [Почему вам следует избегать запуска приложений от имени root](https://bencane.com/2012/02/20/why-you-should-avoid-running-applications-as-root/)
 
 </details>
 
 <details>
-<summary><b>What is load average?</b></summary><br>
+<summary><b>Как проверить статистику памяти и процессора?</b></summary><br>
 
-Linux **load averages** are "system load averages" that show the running thread (task) demand on the system as an average number of running plus waiting threads. This measures demand, which can be greater than what the system is currently processing. Most tools show three averages, for 1, 5, and 15 minutes.
+Вы бы использовали "top/htop" для обоих. Используя команды `free` и `vmstat`, мы можем отобразить статистику физической и виртуальной памяти соответственно. С помощью команды `sar` мы видим загрузку процессора и другую статистику (но `sar` даже не установлен в большинстве систем).
 
-These 3 numbers are not the numbers for the different CPUs. These numbers are mean values of the load number for a given period of time (of the last 1, 5 and 15 minutes).
+Полезные ресурсы:
 
-**Load average** is usually described as "average length of run queue". So few CPU-consuming processes or threads can raise **load average** above 1. There is no problem if **load average** is less than total number of CPU cores. But if it gets higher than number of CPUs, this means some threads/processes will stay in queue, ready to run, but waiting for free CPU.
+- [Как мне узнать загрузку процессора Linux?](https://www.cyberciti.biz/tips/how-do-i-find-out-linux-cpu-utilization.html)
+- [16 команд мониторинга сервера Linux, которые вам действительно нужно знать](https://www.hpe.com/us/en/insights/articles/16-linux-server-monitoring-commands-you-really-need-to-know-1703.html)
 
-It is meant to give you an idea of the state of the system, averaged over several periods of time. Since it is averaged, it takes time for it to go back to 0 after a heavy load was placed on the system.
+</details>
 
-Some interpretations:
+<details>
+<summary><b>Какова средняя нагрузка?</b></summary><br>
 
-- if the averages are 0.0, then your system is idle
-- if the 1 minute average is higher than the 5 or 15 minute averages, then load is increasing
-- if the 1 minute average is lower than the 5 or 15 minute averages, then load is decreasing
-- if they are higher than your CPU count, then you might have a performance problem (it depends)
+Linux ** средние значения загрузки ** (load averages) - это "средние значения загрузки системы", которые показывают спрос на запущенный поток (задачу) в системе как среднее количество запущенных плюс ожидающих потоков. Это измеряет спрос, который может быть больше, чем то, что система обрабатывает в данный момент. Большинство инструментов показывают три средних значения за 1, 5 и 15 минут.
 
-Useful resources:
+Эти 3 цифры не являются номерами для разных процессоров. Эти цифры являются средними значениями номера загрузки за данный период времени (за последние 1, 5 и 15 минут).
 
-- [Linux Load Averages: Solving the Mystery (original)](http://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html)
-- [Linux load average - the definitive summary](http://blog.angulosolido.pt/2015/04/linux-load-average-definitive-summary.html)
-- [How CPU load averages work (and using them to triage webserver performance!)](https://jvns.ca/blog/2016/02/07/cpu-load-averages/)
+** Средняя загрузка**  (Load average) обычно описывается как "средняя длина очереди выполнения". Очень немногие процессы или потоки, потребляющие процессор, могут увеличить ** среднюю загрузку** выше 1. Нет проблем, если ** средняя загрузка** меньше общего количества ядер процессора. Но если оно превысит количество процессоров, это означает, что некоторые потоки /процессы останутся в очереди, готовые к запуску, но ожидающие свободного процессора.
+
+Он предназначен для того, чтобы дать вам представление о состоянии системы, усредненном за несколько периодов времени. Поскольку оно усреднено, требуется время, чтобы оно вернулось к 0 после того, как на систему была наложена большая нагрузка.
+
+Некоторые интерпретации:
+
+- если средние значения равны 0.0, значит, ваша система бездействует
+- если среднее значение за 1 минуту выше среднего значения за 5 или 15 минут, то нагрузка увеличивается
+- если среднее значение за 1 минуту ниже среднего значения за 5 или 15 минут, то нагрузка уменьшается
+- если они превышают количество ваших процессоров, то у вас могут возникнуть проблемы с производительностью (зависит от ситуации)
+
+Полезные ресурсы:
+
+- [Средняя загрузка Linux: разгадка тайны (оригинал)](http://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html)
+- [Средняя загрузка Linux - окончательная сводка](http://blog.angulosolido.pt/2015/04/linux-load-average-definitive-summary.html)
+- [Как работают средние значения загрузки процессора (и использование их для оценки производительности веб-сервера!)](https://jvns.ca/blog/2016/02/07/cpu-load-averages/)
 
 </details>
 
