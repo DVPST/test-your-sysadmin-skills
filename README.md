@@ -187,107 +187,107 @@
 </details>
 
 <details>
-<summary><b>What is your favorite shell and why?</b></summary><br>
+<summary><b>Какая ваша любимая оболочка и почему?</b></summary><br>
 
-**BASH** is my favorite. It’s really a preferential kind of thing, where I love the syntax and it just "clicks" for me. The input/output redirection syntax (`>>`, `<< 2>&1`, `2>`, `1>`, etc) is similar to C++ which makes it easier for me to recognize.
+** BASH ** - мой любимый. Это действительно предпочтительный вариант, где мне нравится синтаксис, и он просто "зацепил" меня. Синтаксис перенаправления ввода/вывода (`>>`, `<< 2>&1`, `2>`, `1>`, и т.д.) похож на C++, что облегчает его распознавание.
 
-I also like the **ZSH** shell, because is much more customizable than **BASH**. It has the Oh-My-Zsh framework, powerful context based tab completion, pattern matching/globbing on steroids, loadable modules and more.
+Мне также нравится оболочка ** ZSH **, потому что она гораздо более настраиваема, чем ** BASH **. В ней есть фреймворк Oh-My-Zsh, мощное контекстное заполнение вкладок, сопоставление шаблонов / глобализация на стероидах, загружаемые модули и многое другое.
 
-Useful resources:
+Полезные ресурсы:
 
-- [Comparison of command shells](https://en.wikipedia.org/wiki/Comparison_of_command_shells)
-
-</details>
-
-<details>
-<summary><b>How do you get help on the command line? ***</b></summary><br>
-
-- `man` [commandname] can be used to see a description of a command (ex.: `man less`, `man cat`)
-
-- `-h` or `--help` some programs will implement printing instructions when passed this parameter (ex.: `python -h` and `python --help`)
+- [Сравнение командных оболочек](https://en.wikipedia.org/wiki/Comparison_of_command_shells)
 
 </details>
 
 <details>
-<summary><b>Your first 5 commands on a *nix server after login.</b></summary><br>
+<summary><b>Как вы получаете справку в командной строке? ***</b></summary><br>
 
-- `w` - a lot of great information in there with the server uptime
-- `top` - you can see all running processes, then order them by CPU, memory utilization and more
-- `netstat` - to know on what port and IP your server is listening on and what processes are using those
-- `df` - reports the amount of available disk space being used by file systems
-- `history` - tell you what was previously run by the user you are currently connected to
+- `man` [название команды] можно использовать для просмотра описания команды (например: `man less`, `man cat`)
 
-Useful resources:
-
-- [First 5 Commands When I Connect on a Linux Server (original)](https://www.linux.com/blog/first-5-commands-when-i-connect-linux-server)
+- `-h` или `--help` некоторые программы реализовывают инструкции вывода справки при передаче этого параметра (например: `python -h` и `python --help`)
 
 </details>
 
 <details>
-<summary><b>What do the fields in <code>ls -al</code> output mean?</b></summary><br>
+<summary><b>Ваши первые 5 команд на сервере *nix после входа в систему.</b></summary><br>
 
-In the order of output:
+- `w` - там много полезной информации о времени безотказной работы сервера
+- `top` - вы можете просмотреть все запущенные процессы, затем упорядочить их по процессору, использованию памяти и многому другому
+- `netstat` - чтобы узнать, на каком порту и IP прослушивается ваш сервер и какие процессы их используют
+- `df` - сообщает об объеме доступного дискового пространства, используемого файловыми системами
+- `history` - сообщает вам, что ранее запускалось пользователем на сервере, к которому вы в данный момент подключены
+
+Полезные ресурсы:
+
+- [Первые 5 команд при подключении к серверу Linux (оригинал)](https://www.linux.com/blog/first-5-commands-when-i-connect-linux-server)
+
+</details>
+
+<details>
+<summary><b>Что означают поля в выводе <code>ls -al</code>?</b></summary><br>
+
+В порядке вывода:
 
 ```bash
 -rwxrw-r--    1    root   root 2048    Jan 13 07:11 db.dump
 ```
 
-- file permissions,
-- number of links,
-- owner name,
-- owner group,
-- file size,
-- time of last modification,
-- file/directory name
+- права доступа к файлам,
+- количество ссылок,
+- имя владельца,
+- группа владельцев,
+- размер файла,
+- время последнего изменения,
+- имя файла/каталога
 
-File permissions is displayed as following:
+Права доступа к файлам отображаются следующим образом:
 
-- first character is `-` or `l` or `d`, `d` indicates a directory, a `-` represents a file, `l` is a symlink (or soft link) - special type of file
-- three sets of characters, three times, indicating permissions for owner, group and other:
-  - `r` = readable
-  - `w` = writable
-  - `x` = executable
+- первый символ - `-`, или `l`, или `d`, `d` указывает на каталог, `-` представляет файл, `l` - символическая ссылка (или программная ссылка на программное обеспечение) - особый тип файла
+- три набора символов, три раза, указывающие разрешения для владельца, группы и других:
+  - `r` = доступно для чтения
+  - `w` = доступно для записи
+  - `x` = доступен для исполнения
 
-In your example `-rwxrw-r--`, this means the line displayed is:
+В вашем примере `-rwxrw-r--` это означает, что отображаемая строка является:
 
-- a regular file (displayed as `-`)
-- readable, writable and executable by owner (`rwx`)
-- readable, writable, but not executable by group (`rw-`)
-- readable but not writable or executable by other (`r--`)
+- обычный файл (отображается как `-`)
+- доступный для чтения, записи и исполнения владельцем (`rwx`)
+- читаемый, доступный для записи, но не исполняемый группой (`rw-`)
+- читаемый, но недоступный для записи или исполняемый другими (`r--`)
 
-Useful resources:
+Полезные ресурсы:
 
-- [What do the fields in ls -al output mean? (original)](https://unix.stackexchange.com/questions/103114/what-do-the-fields-in-ls-al-output-mean)
+- [Что означают поля в выходных данных ls -al? (оригинал)](https://unix.stackexchange.com/questions/103114/what-do-the-fields-in-ls-al-output-mean)
 
 </details>
 
 <details>
-<summary><b>How do you get a list of logged-in users?</b></summary><br>
+<summary><b>Как вы получаете список вошедших в систему пользователей?</b></summary><br>
 
-For a summary of logged-in users, including each login of a username, the terminal users are attached to, the date/time they logged in, and possibly the computer from which they are making the connection, enter:
+Для получения краткой информации о вошедших в систему пользователях, включая каждый логин, к которому подключены пользователи терминала, дату/время, когда они вошли в систему, и, возможно, компьютер, с которого они устанавливают соединение, введите:
 
 ```bash
-# It uses /var/run/utmp and /var/log/wtmp files to get the details.
+# Она использует файлы /var/run/utmp и /var/log/wtmp для получения подробной информации.
 who
 ```
 
-For extensive information, including username, terminal, IP number of the source computer, the time the login began, any idle time, process CPU cycles, job CPU cycles, and the currently running command, enter:
+Для получения подробной информации, включая имя пользователя, терминал, IP-номер исходного компьютера, время начала входа в систему, время простоя, циклы процессора процесса, циклы процессора задания и текущую команду, введите:
 
 ```bash
-# It uses /var/run/utmp, and their processes /proc.
+# Она использует /var/run/utmp и их процессы /proc.
 w
 ```
 
-Also important for displays a list of last logged in users, enter:
+Также важно для отображения списка последних вошедших в систему пользователей ввести:
 
 ```bash
-# It uses /var/log/wtmp.
+# Она использует /var/log/wtmp.
 last
 ```
 
-Useful resources:
+Полезные ресурсы:
 
-- [4 Ways to Identify Who is Logged-In on Your Linux System](https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system/)
+- [4 Способа определить, кто вошел в систему в вашей системе Linux](https://www.thegeekstuff.com/2009/03/4-ways-to-identify-who-is-logged-in-on-your-linux-system/)
 
 </details>
 
