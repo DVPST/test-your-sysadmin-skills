@@ -926,34 +926,34 @@ POP и IMAP - это протоколы для передачи сообщени
 </details>
 
 <details>
-<summary><b>How to check default route and routing table?</b></summary><br>
+<summary><b>Как проверить маршрут по умолчанию и таблицу маршрутизации?</b></summary><br>
 
-Using the commands `netstat -nr`, `route -n` or `ip route show` we can see the default route and routing tables.
+Используя команды `netstat -nr`, `route -n` или `ip route show`, мы можем просмотреть маршрут по умолчанию и таблицы маршрутизации.
 
-Useful resources:
+Полезные ресурсы:
 
-- [How to check routes (routing table) in linux](https://howto.lintel.in/how-to-check-routes-routing-table-in-linux/)
-- [FreeBSD Set a Default Route/Gateway](https://www.cyberciti.biz/faq/freebsd-setup-default-routing-with-route-command/)
+- [Как проверить маршруты (таблицу маршрутизации) в Linux](https://howto.lintel.in/how-to-check-routes-routing-table-in-linux/)
+- [FreeBSD задание маршрута/шлюза по умолчанию](https://www.cyberciti.biz/faq/freebsd-setup-default-routing-with-route-command/)
 
 </details>
 
 <details>
-<summary><b>What is the difference between 127.0.0.1 and localhost?</b></summary><br>
+<summary><b>В чем разница между 127.0.0.1 и localhost?</b></summary><br>
 
-Well, the most likely difference is that you still have to do an actual lookup of localhost somewhere.
+Что ж, наиболее вероятная разница заключается в том, что вам все равно придется где-то выполнять фактический поиск localhost.
 
-If you use `127.0.0.1`, then (intelligent) software will just turn that directly into an IP address and use it. Some implementations of `gethostbyname` will detect the dotted format (and presumably the equivalent IPv6 format) and not do a lookup at all.
+Если вы используете `127.0.0.1`, то (интеллектуальное) программное обеспечение просто преобразует это непосредственно в IP-адрес и использует его. Некоторые реализации `gethostbyname` обнаружат точечный формат (и, предположительно, эквивалентный формат IPv6) и вообще не будут выполнять поиск.
 
-Otherwise, the name has to be resolved. And there's no guarantee that your hosts file will actually be used for that resolution (first, or at all) so `localhost` may become a totally different IP address.
+В противном случае имя должно быть разрешено. И нет никакой гарантии, что ваш файл hosts действительно будет использоваться для этого разрешения (сначала или вообще), поэтому `localhost` может стать совершенно другим IP-адресом.
 
-By that I mean that, on some systems, a local hosts file can be bypassed. The `host.conf` file controls this on Linux (and many other Unices).
+Под этим я подразумеваю, что в некоторых системах локальный файл hosts можно обойти. Файл `host.conf` управляет этим в Linux (и многих других Unices).
 
-If you use a Unix domain socket it'll be slightly faster than using TCP/IP (because of the less overhead you have). Windows is using TCP/IP as a default, whereas Linux tries to use a Unix Domain Socket if you choose localhost and TCP/IP if you take `127.0.0.1`.
+Если вы используете доменный сокет Unix, это будет немного быстрее, чем при использовании TCP/IP (из-за меньших накладных расходов). Windows использует TCP/IP по умолчанию, в то время как Linux пытается использовать доменный сокет Unix, если вы выберете localhost, и TCP/IP, если вы выберете `127.0.0.1`.
 
-Useful resources:
+Полезные ресурсы:
 
-- [What is the difference between 127.0.0.1 and localhost?](https://stackoverflow.com/questions/7382602/what-is-the-difference-between-127-0-0-1-and-localhost)
-- [localhost vs. 127.0.0.1](https://stackoverflow.com/questions/3715925/localhost-vs-127-0-0-1)
+- [В чем разница между 127.0.0.1 и localhost?](https://stackoverflow.com/questions/7382602/what-is-the-difference-between-127-0-0-1-and-localhost)
+- [localhost против 127.0.0.1](https://stackoverflow.com/questions/3715925/localhost-vs-127-0-0-1)
 
 </details>
 
