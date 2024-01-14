@@ -795,84 +795,84 @@ find / -mmin -60 -type f
 </details>
 
 <details>
-<summary><b>How is a user’s default group determined? How would you change it? </b></summary><br>
+<summary><b>Как определяется группа пользователя по умолчанию? Как бы вы ее изменили? </b></summary><br>
 
 ```bash
 useradd -m -g initial_group username
 ```
 
-`-g/--gid`: defines the group name or number of the user's initial login group. If specified, the group name must exist; if a group number is provided, it must refer to an already existing group.
+`-g/--gid`: определяет имя группы или номер начальной группы входа пользователя. Если указано, имя группы должно существовать; если указан номер группы, он должен относиться к уже существующей группе.
 
-If not specified, the behaviour of useradd will depend on the `USERGROUPS_ENAB` variable contained in `/etc/login.defs`. The default behaviour (`USERGROUPS_ENAB yes`) is to create a group with the same name as the username, with **GID** equal to **UID**.
+Если не указано, поведение useradd будет зависеть от переменной `USERGROUPS_ENAB`, содержащейся в `/etc/login.defs`. Поведение по умолчанию (`USERGROUPS_ENAB yes`) заключается в создании группы с тем же именем, что и имя пользователя, с **GID** равным **UID**.
 
-Useful resources:
+Полезные ресурсы:
 
-- [How can I change a user's default group in Linux?](https://unix.stackexchange.com/questions/26675/how-can-i-change-a-users-default-group-in-linux)
-
-</details>
-
-<details>
-<summary><b>What is your best command line text editor for daily working and scripting? ***</b></summary><br>
-
-To be completed.
+- [Как я могу изменить группу пользователя по умолчанию в Linux?](https://unix.stackexchange.com/questions/26675/how-can-i-change-a-users-default-group-in-linux)
 
 </details>
 
 <details>
-<summary><b>Why would you want to mount servers in a rack?</b></summary><br>
+<summary><b>Какой ваш лучший текстовый редактор командной строки для повседневной работы и написания сценариев? ***</b></summary><br>
 
-- Protecting Hardware
-- Proper Cooling
-- Organized Workspace
-- Better Power Management
-- Cleaner Environment
-
-Useful resources:
-
-- [5 Reasons to Rackmount Your PC](https://www.racksolutions.com/news/custom-projects/5-reasons-to-rackmount-pc/)
-
-</details>
-
-###### Network Questions (23)
-
-<details>
-<summary><b>Draw me a simple network diagram: you have 20 systems, 1 router, 4 switches, 5 servers, and a small IP block. ***</b></summary><br>
-
-To be completed.
+Подлежит завершению.
 
 </details>
 
 <details>
-<summary><b>What are the most important things to understand about the OSI (or any other) model?</b></summary><br>
+<summary><b>Зачем вам монтировать серверы в стойку?</b></summary><br>
 
-The most important things to understand about the **OSI** (or any other) model are:
+- Защита аппаратного обеспечения
+- Надлежащее охлаждение
+- Организованное рабочее пространство
+- Лучшее управление питанием
+- Более чистая окружающая среда
 
-- we can divide up the protocols into layers
-- layers provide encapsulation
-- layers provide abstraction
-- layers decouple functions from others
+Полезные ресурсы:
 
-Useful resources:
+- [5 причин установить компьютер в стойку](https://www.racksolutions.com/news/custom-projects/5-reasons-to-rackmount-pc/)
 
-- [OSI Model and Networking Protocols Relationship](https://networkengineering.stackexchange.com/questions/6380/osi-model-and-networking-protocols-relationship)
+</details>
+
+###### Сетевые вопросы (23)
+
+<details>
+<summary><b>Нарисуйте мне простую сетевую схему: у вас есть 20 систем, 1 маршрутизатор, 4 коммутатора, 5 серверов и небольшой IP-блок. ***</b></summary><br>
+
+Подлежит завершению.
 
 </details>
 
 <details>
-<summary><b>What is the difference between a VLAN and a subnet? Do you need a VLAN to setup a subnet?</b></summary><br>
+<summary><b>Какие наиболее важные вещи следует понимать о модели OSI (или любой другой)?</b></summary><br>
 
-**VLANs** and **subnets** solve different problems. **VLANs** work at Layer 2, thereby altering broadcast domains (for instance). Whereas **subnets** are Layer 3 in the current context.
+Наиболее важными вещами, которые следует понимать о **OSI** (или любой другой) модели, являются:
 
-**Subnet** - is a range of IP addresses determined by part of an address (often called the network address) and a subnet mask (netmask). For example, if the netmask is `255.255.255.0` (or `/24` for short), and the network address is `192.168.10.0`, then that defines a range of IP addresses `192.168.10.0` through `192.168.10.255`. Shorthand for writing that is `192.168.10.0/24`.
+- мы можем разделить протоколы на уровни
+- уровни обеспечивают инкапсуляцию
+- уровни обеспечивают абстракцию
+- уровни отделяют функции от других
 
-**VLAN** - a good way to think of this is "switch partitioning." Let's say you have an 8 port switch that is VLAN-able. You can assign 4 ports to one **VLAN** (say `VLAN 1`) and 4 ports to another **VLAN** (say `VLAN 2`). `VLAN 1` won't see any of `VLAN 2's` traffic and vice versa, logically, you now have two separate switches. Normally on a switch, if the switch hasn't seen a MAC address it will "flood" the traffic to all other ports. **VLANs** prevent this.
+Полезные ресурсы:
 
-Subnet is nothing more than an IP address range of IP addresses that help hosts communicate over layer 2 and 3. Each subnet does not require its own **VLAN**. **VLANs** are implemented for isolation (are sandbox for layer two communication, no 2 systems of 2 different **VLANs** may communicate but it can be done through **Inter VLAN routing**), ease of management and security.
+- [Взаимосвязь модели OSI и сетевых протоколов](https://networkengineering.stackexchange.com/questions/6380/osi-model-and-networking-protocols-relationship)
 
-Useful resources:
+</details>
 
-- [What is the difference between a VLAN and a subnet? (original)](https://superuser.com/questions/353664/what-is-the-difference-between-a-vlan-and-a-subnet)
-- [VLANS vs. subnets for network security and segmentation](https://networkengineering.stackexchange.com/questions/46899/vlans-vs-subnets-for-network-security-and-segmentation)
+<details>
+<summary><b>В чем разница между VLAN и подсетью? Нужна ли вам VLAN для настройки подсети?</b></summary><br>
+
+**VLAN** и **подсети** решают разные проблемы. **VLAN** работают на уровне 2, тем самым изменяя широковещательные домены (например). В то время как **подсети** в текущем контексте относятся к уровню 3.
+
+**Подсеть** - это диапазон IP-адресов, определяемый частью адреса (часто называемого сетевым адресом) и маской подсети (netmask). Например, если маска сети равна `255.255.255.0` (или сокращенно `/24`), а сетевой адрес равен`192.168.10.0`, то это определяет диапазон IP-адресов от `192.168.10.0` до `192.168.10.255`. Сокращенное обозначение для записи - `192.168.10.0/24`.
+
+**VLAN** - хороший способ представить это как "разделение коммутатора". Допустим, у вас есть 8-портовый коммутатор, поддерживающий VLAN. Вы можете назначить 4 порта одной **VLAN** (скажем, `VLAN 1`) и 4 порта другой **VLAN** (скажем, `VLAN 2`). `VLAN 1` не будет видеть трафик `VLAN 2`, и наоборот, по логике вещей, теперь у вас есть два отдельных коммутатора. Обычно на коммутаторе, если коммутатор не видит MAC-адрес, он "перенаправляет" трафик на все остальные порты. **VLAN**  предотвращает это.
+
+Подсеть - это не что иное, как диапазон IP-адресов, которые помогают хостам взаимодействовать через уровни 2 и 3. Каждой подсети не требуется своя собственная **VLAN**. **VLAN** реализованы для изоляции (являются изолированной средой для связи второго уровня, никакие 2 системы из 2 разных ** VLAN** не могут взаимодействовать, но это может быть сделано через ** Маршрутизацию между VLAN**), простоты управления и безопасности.
+
+Полезные ресурсы:
+
+- [В чем разница между VLAN и подсетью? (оригинал)](https://superuser.com/questions/353664/what-is-the-difference-between-a-vlan-and-a-subnet)
+- [Виртуальные сети и подсети для обеспечения сетевой безопасности и сегментации](https://networkengineering.stackexchange.com/questions/46899/vlans-vs-subnets-for-network-security-and-segmentation)
 
 </details>
 
