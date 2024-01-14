@@ -877,12 +877,12 @@ useradd -m -g initial_group username
 </details>
 
 <details>
-<summary><b>List 5 common network ports you should know.</b></summary><br>
+<summary><b>Перечислите 5 распространенных сетевых портов, которые вы должны знать.</b></summary><br>
 
 <table style="width:100%">
   <tr>
-    <th>SERVICE</th>
-    <th>PORT</th>
+    <th>Служба</th>
+    <th>Порт</th>
   </tr>
   <tr>
     <td>SMTP</td>
@@ -890,7 +890,7 @@ useradd -m -g initial_group username
   </tr>
   <tr>
     <td>FTP</td>
-    <td>20 for data transfer and 21 for connection established</td>
+    <td>20 для передачи данных и 21 для установления соединения</td>
   </tr>
   <tr>
     <td>DNS</td>
@@ -898,7 +898,7 @@ useradd -m -g initial_group username
   </tr>
   <tr>
     <td>DHCP</td>
-    <td>67/UDP for DHCP server, 68/UDP for DHCP client</td>
+    <td>67/UDP для DHCP-сервера, 68/UDP для DHCP-клиента</td>
   </tr>
   <tr>
     <td>SSH</td>
@@ -906,22 +906,22 @@ useradd -m -g initial_group username
   </tr>
 </table>
 
-Useful resources:
+Полезные ресурсы:
 
-- [Red Hat Enterprise Linux 4: Security Guide - Common Ports](https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-ports.html)
+- [Red Hat Enterprise Linux 4: Руководство по безопасности - Общие порты](https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-sg-en-4/ch-ports.html)
 
 </details>
 
 <details>
-<summary><b>What POP and IMAP are, and how to choose which of them you should implement?</b></summary><br>
+<summary><b>Что такое POP и IMAP и как выбрать, какой из них вам следует использовать?</b></summary><br>
 
-POP and IMAP are both protocols for retrieving messages from a mail server to a mail client.
+POP и IMAP - это протоколы для передачи сообщений с почтового сервера почтовому клиенту.
 
-**POP** (_Post Office Protocol_) uses a one way push from mail server to client. By default this will send messages to the POP mail client and remove them from the mail server, though it is possible to configure the mail server to retain all messages. Any actions you take on the message in your mail client (labeling, deleting, moving to a folder) will not be reflected on the mail server, and thus inaccessible to other mail clients pulling from the mail server. POP uses little storage space on the mail server and can be seen as more secure since messages only exist on one mail client instead of the mail server and multiple clients.
+**POP** (_Post Office Protocol_ - протокол почтовой службы) использует односторонний обмен сообщениями от почтового сервера к клиенту. По умолчанию при этом сообщения будут отправляться почтовому клиенту POP и удаляться с почтового сервера, хотя можно настроить почтовый сервер так, чтобы он сохранял все сообщения. Любые действия, которые вы выполняете с сообщением в вашем почтовом клиенте (пометка, удаление, перемещение в папку), не будут отражены на почтовом сервере и, таким образом, недоступны для других почтовых клиентов, получающих доступ с почтового сервера. POP использует мало места для хранения на почтовом сервере и может рассматриваться как более безопасный, поскольку сообщения существуют только в одном почтовом клиенте, а не на почтовом сервере и нескольких клиентах.
 
-**IMAP** (_Internet Message Access Protocol_) uses two way communication between mail server and client. Deleting or labeling a message in your mail client configured with IMAP will also delete or label the message on the mail server. IMAP allows for a similar experience when accessing mail across different clients or devices since messages can existing in the same state across multiple devices. IMAP can also save disk space on the mail client by selectively syncing messages, deleting older messages from the mail client since it can sync them from the mail server later as needed.
+**IMAP** (_Internet Message Access Protocol_ - Протокол доступа к интернет-сообщениям) использует двустороннюю связь между почтовым сервером и клиентом. Удаление или пометка сообщения в вашем почтовом клиенте, настроенном с помощью IMAP, также приведет к удалению или пометке сообщения на почтовом сервере. Протокол IMAP обеспечивает аналогичный опыт при доступе к почте на разных клиентах или устройствах, поскольку сообщения могут находиться в одном и том же состоянии на нескольких устройствах. IMAP также может экономить дисковое пространство в почтовом клиенте, выборочно синхронизируя сообщения, удаляя старые сообщения из почтового клиента, поскольку он может синхронизировать их с почтовым сервером позже по мере необходимости.
 
-Choose IMAP if you need to access messages across multiple devices and you want to save disk space on your client device. Choose POP if you want to save disk space on your mail server, only access messages from one client device, and ensure that messages do not exist on multiple systems.
+Выберите IMAP, если вам нужен доступ к сообщениям с нескольких устройств и вы хотите сэкономить дисковое пространство на своем клиентском устройстве. Выберите POP, если вы хотите сэкономить дисковое пространство на своем почтовом сервере, получайте доступ к сообщениям только с одного клиентского устройства и убедитесь, что сообщения не существуют в нескольких системах.
 
 </details>
 
