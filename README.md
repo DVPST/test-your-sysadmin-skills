@@ -686,109 +686,109 @@ rsync -av --progress --delete dir1/ dir2
 - сделайте резервную копию исходного файла в вашем редакторе (например, установите правила в файле конфигурации вашего редактора).
 - лучшим решением является использование `git` (или любого другого средства управления версиями) для отслеживания конфигурационных файлов (например, `etckeeper` для каталога `/etc`).
 
-Useful resources:
+Полезные ресурсы:
 
-- [Backup file with .bak before filename extension](https://unix.stackexchange.com/questions/66376/backup-file-with-bak-before-filename-extension)
-- [Is it a good idea to use git for configuration file version controlling?](https://superuser.com/questions/1037211/is-it-a-good-idea-to-use-git-for-configuration-file-version-controlling)
+- [Файл резервной копии с расширением .bak перед расширением имени файла](https://unix.stackexchange.com/questions/66376/backup-file-with-bak-before-filename-extension)
+- [Хорошая ли идея использовать git для управления версиями конфигурационных файлов?](https://superuser.com/questions/1037211/is-it-a-good-idea-to-use-git-for-configuration-file-version-controlling)
 
 </details>
 
 <details>
-<summary><b>You have to find all files larger than 20MB. How you do it?</b></summary><br>
+<summary><b>Вы должны найти все файлы размером более 20 МБ. Как вы это делаете?</b></summary><br>
 
 ```bash
 find / -type f -size +20M
 ```
 
-Useful resources:
+Полезные ресурсы:
 
-- [How can I find files that are bigger/smaller than x bytes?](https://superuser.com/questions/204564/how-can-i-find-files-that-are-bigger-smaller-than-x-bytes)
-
-</details>
-
-<details>
-<summary><b>Why do we use <code>sudo su -</code> and not just <code>sudo su</code>?</b></summary><br>
-
-`sudo` is in most modern Linux distributions where (but not always) the root user is disabled and has no password set. Therefore you cannot switch to the root user with `su` (you can try). You have to call `sudo` with root privileges: `sudo su`.
-
-`su` just switches the user, providing a normal shell with an environment nearly the same as with the old user.
-
-`su -` invokes a login shell after switching the user. A login shell resets most environment variables, providing a clean base.
-
-Useful resources:
-
-- [su vs sudo -s vs sudo -i vs sudo bash](https://unix.stackexchange.com/questions/35338/su-vs-sudo-s-vs-sudo-i-vs-sudo-bash)
-- [Why do we use su - and not just su? (original)](https://unix.stackexchange.com/questions/7013/why-do-we-use-su-and-not-just-su)
+- [Как я могу найти файлы, размер которых больше / меньше x байт?](https://superuser.com/questions/204564/how-can-i-find-files-that-are-bigger-smaller-than-x-bytes)
 
 </details>
 
 <details>
-<summary><b>How to find files that have been modified on your system in the past 60 minutes?</b></summary><br>
+<summary><b>Почему мы используем <code>sudo su -</code>, а не просто <code>sudo su</code>?</b></summary><br>
+
+`sudo` используется в большинстве современных дистрибутивов Linux, где (но не всегда) пользователь root отключен и пароль не установлен. Поэтому вы не можете переключиться на пользователя root с помощью `su` (вы можете попробовать). Вы должны вызвать `sudo` с правами суперпользователя: `sudo su`.
+
+`su` просто переключает пользователя, предоставляя обычную оболочку со средой, почти такой же, как у старого пользователя.
+
+`su -` вызывает оболочку входа в систему после переключения пользователя. Оболочка входа в систему сбрасывает большинство переменных окружения, обеспечивая чистую базу.
+
+Полезные ресурсы:
+
+- [su против sudo -s против sudo -i против sudo bash](https://unix.stackexchange.com/questions/35338/su-vs-sudo-s-vs-sudo-i-vs-sudo-bash)
+- [Почему мы используем su -, а не только su? (оригинал)](https://unix.stackexchange.com/questions/7013/why-do-we-use-su-and-not-just-su)
+
+</details>
+
+<details>
+<summary><b>Как найти файлы, которые были изменены в вашей системе за последние 60 минут?</b></summary><br>
 
 ```bash
 find / -mmin -60 -type f
 ```
 
-Useful resources:
+Полезные ресурсы:
 
-- [Get all files modified in last 30 days in a directory (orignal)](https://stackoverflow.com/questions/23070245/get-all-files-modified-in-last-30-days-in-a-directory)
-
-</details>
-
-<details>
-<summary><b>What are the main reasons for keeping old log files?</b></summary><br>
-
-They are essential to investigate issues on the system. **Log management** is absolutely critical for IT security.
-
-Servers, firewalls, and other IT equipment keep log files that record important events and transactions. This information can provide important clues about hostile activity affecting your network from within and without. Log data can also provide information for identifying and troubleshooting equipment problems including configuration problems and hardware failure.
-
-It’s your server’s record of who’s come to your site, when, and exactly what they looked at. It’s incredibly detailed, showing:
-
-- where folks came from
-- what browser they were using
-- exactly which files they looked at
-- how long it took to load each file
-- and a whole bunch of other nerdy stuff
-
-Factors to consider:
-
-- legal requirements for retention or destruction
-- company policies for retention and destruction
-- how long the logs are useful
-- what questions you're hoping to answer from the logs
-- how much space they take up
-
-By collecting and analyzing logs, you can understand what transpires within your network. Each log file contains many pieces of information that can be invaluable, especially if you know how to read them and analyze them.
-
-Useful resources:
-
-- [How long do you keep log files?](https://serverfault.com/questions/135365/how-long-do-you-keep-log-files)
+- [Получить все файлы, измененные за последние 30 дней, в каталоге (оригинал)](https://stackoverflow.com/questions/23070245/get-all-files-modified-in-last-30-days-in-a-directory)
 
 </details>
 
 <details>
-<summary><b>What is an incremental backup?</b></summary><br>
+<summary><b>Каковы основные причины сохранения старых файлов журналов?</b></summary><br>
 
-An incremental backup is a type of backup that only copies files that have changed since the previous backup.
+Они необходимы для расследования проблем в системе. **Управление журналами** абсолютно необходимо для обеспечения ИТ-безопасности.
 
-Useful resources:
+Серверы, брандмауэры и другое ИТ-оборудование хранят файлы журналов, в которых записываются важные события и транзакции. Эта информация может дать важные подсказки о враждебной активности, влияющей на вашу сеть изнутри и извне. Данные журнала также могут предоставить информацию для выявления и устранения неполадок с оборудованием, включая проблемы с конфигурацией и аппаратный сбой.
 
-- [What Is Incremental Backup?](https://www.nakivo.com/blog/what-is-incremental-backup/)
+Это запись вашего сервера о том, кто заходил на ваш сайт, когда и что именно они просматривали. Она невероятно подробная, показывающая:
+
+- откуда пришли люди
+- какой браузер они использовали
+- какие именно файлы они просматривали
+- сколько времени потребовалось для загрузки каждого файла
+- и целая куча других занудных штучек
+
+Факторы, которые следует учитывать:
+
+- юридические требования к хранению или уничтожению
+- политика компании в отношении хранения и уничтожения
+- как долго будут полезны журналы
+- на какие вопросы вы надеетесь получить ответы из журналов
+- сколько места они занимают
+
+Собирая и анализируя журналы, вы можете понять, что происходит в вашей сети. Каждый файл журнала содержит множество фрагментов информации, которые могут оказаться бесценными, особенно если вы знаете, как их читать и анализировать.
+
+Полезные ресурсы:
+
+- [Как долго вы храните лог-файлы?](https://serverfault.com/questions/135365/how-long-do-you-keep-log-files)
 
 </details>
 
 <details>
-<summary><b>What is RAID? What is RAID0, RAID1, RAID5, RAID6, RAID10? </b></summary><br>
+<summary><b>Что такое инкрементное резервное копирование?</b></summary><br>
 
-A **RAID** (Redundant Array of Inexpensive Disks) is a technology that is used to increase the performance and/or reliability of data storage.
+Инкрементное резервное копирование - это тип резервного копирования, при котором копируются только те файлы, которые изменились с момента предыдущего резервного копирования.
 
-- **RAID0**: Also known as disk **striping**, is a technique that breaks up a file and spreads the data across all the disk drives in a RAID group. There are no safeguards against failure
-- **RAID1**: A popular disk subsystem that increases safety by writing the same data on two drives. Called "**mirroring**," RAID 1 does not increase write performance, but read performance may equal up to the sum of each disks' performance. However, if one drive fails, the second drive is used, and the failed drive is manually replaced. After replacement, the RAID controller duplicates the contents of the working drive onto the new one
-- **RAID5**: It is disk subsystem that increases safety by computing parity data and increasing speed by interleaving data across three or more drives (**striping**). Upon failure of a single drive, subsequent reads can be calculated from the distributed parity such that no data is lost
-- **RAID6**: RAID 6 extends RAID 5 by adding another parity block. It requires a minimum of four disks and can continue to execute read and write of any two concurrent disk failures. RAID 6 does not have a performance penalty for read operations, but it does have a performance penalty on write operations because of the overhead associated with parity calculations
-- **RAID10**: Also known as **RAID 1+0**, is a RAID configuration that combines disk mirroring and disk striping to protect data. It requires a minimum of four disks, and stripes data across mirrored pairs. As long as one disk in each mirrored pair is functional, data can be retrieved. If two disks in the same mirrored pair fail, all data will be lost because there is no parity in the striped sets
+Полезные ресурсы:
 
-Useful resources:
+- [Что такое инкрементное резервное копирование?](https://www.nakivo.com/blog/what-is-incremental-backup/)
+
+</details>
+
+<details>
+<summary><b>Что такое RAID? Что такое RAID0, RAID1, RAID5, RAID6, RAID10? </b></summary><br>
+
+**RAID** (резервированный массив недорогих дисков) - это технология, которая используется для повышения производительности и/или надежности хранения данных.
+
+- **RAID0**: Также известный как **чередование** дисков - это метод, который разбивает файл и распределяет данные по всем дискам в группе RAID. Нет никаких гарантий от сбоя
+- **RAID1**: Популярная дисковая подсистема, повышающая безопасность за счет записи одних и тех же данных на два диска. Называемый "**зеркальным отображением**", RAID 1 не увеличивает производительность записи, но производительность чтения может равняться сумме производительности каждого диска. Однако, если один диск выходит из строя, используется второй диск, а вышедший из строя диск заменяется вручную. После замены RAID-контроллер дублирует содержимое рабочего диска на новый
+- **RAID5**: Это дисковая подсистема, которая повышает безопасность за счет вычисления данных о четности и увеличения скорости за счет чередования данных на трех или более дисках (**чередование**). При выходе из строя одного накопителя последующие операции чтения могут быть рассчитаны на основе распределенной четности таким образом, чтобы данные не были потеряны
+- **RAID6**: RAID 6 расширяет RAID 5, добавляя еще один блок проверки четности. Для этого требуется минимум четыре диска, и он может продолжать выполнять чтение и запись при любых двух одновременных сбоях диска. RAID 6 не имеет снижения производительности при операциях чтения, но у него есть снижение производительности при операциях записи из-за накладных расходов, связанных с вычислениями четности
+- **RAID10**: Также известный как **RAID 1+0**, представляет собой конфигурацию RAID, которая сочетает зеркальное отображение дисков и чередование дисков для защиты данных. Для этого требуется минимум четыре диска, и данные распределяются по зеркальным парам. Пока один диск в каждой зеркальной паре функционирует, данные могут быть извлечены. Если два диска в одной зеркальной паре выйдут из строя, все данные будут потеряны, поскольку в чередующихся наборах нет четности
+
+Полезные ресурсы:
 
 - [RAID](https://www.prepressure.com/library/technology/raid)
 
