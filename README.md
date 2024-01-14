@@ -580,50 +580,50 @@ grep -e "string1" -e "string2" filename
 </details>
 
 <details>
-<summary><b>How do I <code>grep</code> recursively? Explain on several examples. ***</b></summary>
+<summary><b>Как мне выполнить<code>grep</code> рекурсивно? Объясните на нескольких примерах. ***</b></summary>
 
-To be completed.
+Подлежит завершению.
 
 </details>
 
 <details>
-<summary><b><code>archive.tgz</code> has ~30 GB. How do you list content of it and extract only one file?</b></summary><br>
+<summary><b><code>archive.tgz</code> имеет ~30 ГБ. Как вы просмотрите его содержимое и извлечете только один файл?</b></summary><br>
 
 ```bash
-# list of content
+# список содержимого
 tar tf archive.tgz
 
-# extract file
+# извлечь файл
 tar xf archive.tgz filename
 ```
 
-Useful resources:
+Полезные ресурсы:
 
-- [List the contents of a tar or tar.gz file](https://www.cyberciti.biz/faq/list-the-contents-of-a-tar-or-targz-file/)
-- [How to extract specific file(s) from tar.gz](https://unix.stackexchange.com/questions/61461/how-to-extract-specific-files-from-tar-gz)
+- [Список содержимого tar или tar.gz файла](https://www.cyberciti.biz/faq/list-the-contents-of-a-tar-or-targz-file/)
+- [Как извлечь определенный файл(ы) из tar.gz](https://unix.stackexchange.com/questions/61461/how-to-extract-specific-files-from-tar-gz)
 
 </details>
 
 <details>
-<summary><b>Execute combine multiple shell commands in one line.</b></summary><br>
+<summary><b>Выполните объединение нескольких команд оболочки в одной строке.</b></summary><br>
 
-If you want to execute each command only if the previous one succeeded, then combine them using the `&&` operator:
+Если вы хотите выполнять каждую команду только в том случае, если предыдущая была успешной, то объедините их с помощью оператора `&&`:
 
 ```bash
 cd /my_folder && rm *.jar && svn co path to repo && mvn compile package install
 ```
 
-If one of the commands fails, then all other commands following it won't be executed.
+Если одна из команд завершится неудачей, то все остальные команды, следующие за ней, выполняться не будут.
 
-If you want to execute all commands regardless of whether the previous ones failed or not, separate them with semicolons:
+Если вы хотите выполнить все команды независимо от того, завершились ли предыдущие неудачно или нет, разделите их точками с запятой:
 
 ```bash
 cd /my_folder; rm *.jar; svn co path to repo; mvn compile package install
 ```
 
-In your case, I think you want the first case where execution of the next command depends on the success of the previous one.
+В вашем случае, я думаю, вам нужен первый случай, когда выполнение следующей команды зависит от успеха предыдущей.
 
-You can also put all commands in a script and execute that instead:
+Вы также можете поместить все команды в скрипт и выполнить его вместо этого:
 
 ```bash
 #! /bin/sh
@@ -633,27 +633,27 @@ cd /my_folder \
 && mvn compile package install
 ```
 
-Useful resources:
+Полезные ресурсы:
 
-- [Execute combine multiple linux commands in one line (original)](https://stackoverflow.com/questions/13077241/execute-combine-multiple-linux-commands-in-one-line)
+- [Выполнить объединение нескольких команд Linux в одной строке (оригинал)](https://stackoverflow.com/questions/13077241/execute-combine-multiple-linux-commands-in-one-line)
 
 </details>
 
 <details>
-<summary><b>What symbolic representation can you pass to <code>chmod</code> to give all users execute access to a file without affecting other permissions?</b></summary><br>
+<summary><b>Какое символическое представление вы можете передать в <code>chmod</code>, чтобы предоставить всем пользователям доступ к файлу для выполнения, не затрагивая другие разрешения?</b></summary><br>
 
 ```bash
 chmod a+x /path/to/file
 ```
 
-- `a` - for all users
-- `x` - for execution permission
-- `r` - for read permission
-- `w` - for write permission
+- `a` - для всех пользователей
+- `x` - для разрешения на выполнение
+- `r` - для разрешения на чтение
+- `w` - для разрешения на запись
 
-Useful resources:
-- [How to Set File Permissions Using chmod](https://www.washington.edu/computing/unix/permissions.html)
-- [What does "chmod +x your_file_name" do and how do I use it?](https://askubuntu.com/questions/443789/what-does-chmod-x-filename-do-and-how-do-i-use-it)
+Полезные ресурсы:
+- [Как установить права доступа к файлам с помощью chmod](https://www.washington.edu/computing/unix/permissions.html)
+- [Что делает "chmod +x your_file_name" и как мне его использовать?](https://askubuntu.com/questions/443789/what-does-chmod-x-filename-do-and-how-do-i-use-it)
 
 </details>
 
