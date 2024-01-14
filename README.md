@@ -658,33 +658,33 @@ chmod a+x /path/to/file
 </details>
 
 <details>
-<summary><b>How can I sync two local directories?</b></summary><br>
+<summary><b>Как я могу синхронизировать два локальных каталога?</b></summary><br>
 
-To sync the contents of **dir1** to **dir2** on the same system, type:
+Чтобы синхронизировать содержимое **dir1** с **dir2** в той же системе, введите:
 
 ```bash
 rsync -av --progress --delete dir1/ dir2
 ```
 
-- `-a`, `--archive` - archive mode
-- `--delete` - delete extraneous files from dest dirs
-- `-v`, `--verbose` - verbose mode (increase verbosity)
-- `--progress` - show progress during transfer
+- `-a`, `--archive` - режим архивирования
+- `--delete` - удалить посторонние файлы из каталогов назначения
+- `-v`, `--verbose` - режим детализации (увеличение детализации)
+- `--progress` - показывать прогресс во время передачи
 
-Useful resources:
+Полезные ресурсы:
 
-- [How can I sync two local directories? (original](https://unix.stackexchange.com/questions/392536/how-can-i-sync-two-local-directories)
-- [Synchronizing folders with rsync](https://www.jveweb.net/en/archives/2010/11/synchronizing-folders-with-rsync.html)
+- [Как я могу синхронизировать два локальных каталога? (оригинал)](https://unix.stackexchange.com/questions/392536/how-can-i-sync-two-local-directories)
+- [Синхронизация папок с помощью rsync](https://www.jveweb.net/en/archives/2010/11/synchronizing-folders-with-rsync.html)
 
 </details>
 
 <details>
-<summary><b>Many basic maintenance tasks require you to edit config files. Explain ways to undo the changes you make.</b></summary><br>
+<summary><b>Многие базовые задачи обслуживания требуют от вас редактирования конфигурационных файлов. Объясните, как отменить внесенные вами изменения.</b></summary><br>
 
-- manually backup of a file before editing (with brace expansion like this: `cp filename{,.orig}`)
-- manual copy of the directory structure where file is stored (e.g. `cp`, `rsync` or `tar`)
-- make a backup of original file in your editor (e.g. set rules in your editor configuration file)
-- the best solution is to use `git` (or any other version control) to keep track of configuration files (e.g. `etckeeper` for `/etc` directory)
+- ручное резервное копирование файла перед редактированием (с расширением в скобках следующим образом: `cp filename{,.orig}`)
+- ручное копирование структуры каталогов, в которых хранится файл (например, `cp`, `rsync` или `tar`)
+- сделайте резервную копию исходного файла в вашем редакторе (например, установите правила в файле конфигурации вашего редактора).
+- лучшим решением является использование `git` (или любого другого средства управления версиями) для отслеживания конфигурационных файлов (например, `etckeeper` для каталога `/etc`).
 
 Useful resources:
 
